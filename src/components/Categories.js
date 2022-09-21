@@ -23,7 +23,7 @@ const Categories = ({ nextStep, categories }) => {
 
   React.useEffect(() => {
     setListedCategories(categories);
-  }, []);
+  }, [categories]);
   
   React.useEffect(() => {
     let enabledCategories = [];

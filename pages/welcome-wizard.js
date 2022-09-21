@@ -5,9 +5,19 @@ import Budgeting from "../src/components/Budgeting";
 import Categories from "../src/components/Categories";
 import axios from "axios";
 
-export default function welcomeWizard({ categories }) {
+export default function welcomeWizard() {
   const [formStep, setFormStep] = React.useState(0);
-  
+  const [categories, setCategories] = React.useState([]);
+
+  React.useEffect(() => {
+    const getCategories = async () => {
+      const response = await axios.get("/db.json");
+      const categories = await response.data.categories;
+      setCategories(categories)
+    };
+    getCategories();
+  }, []);
+
   return (
     <>
       <PageHead title="Welcome Wizard" />
@@ -30,14 +40,14 @@ export default function welcomeWizard({ categories }) {
   );
 }
 
-export const getServerSideProps = async () => {
-  const url = "http://localhost:5001/categories";
-  const response = await axios.get(url);
-  const categories = await response.data;
+// export const getServerSideProps = async () => {
+//   const url = "http://localhost:5001/categories";
+//   const response = await axios.get(url);
+//   const categories = await response.data;
 
-  return {
-    props: {
-      categories,
-    },
-  };
-};
+//   return {
+//     props: {
+//       categories,
+//     },
+//   };
+// };

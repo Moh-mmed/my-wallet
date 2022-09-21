@@ -1,5 +1,4 @@
 import React from "react";
-
 import { Box } from "@mui/material";
 import PageHead from "../src/components/PageHead";
 import Header from "../src/components/Header";

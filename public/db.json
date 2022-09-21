@@ -1,0 +1,52 @@
+{
+    "categories": [
+        {
+            "id": 1,
+            "name": "Shopping",
+            "type": "expense",
+            "budget": 3000,
+            "icon": "ShoppingCart",
+            "isEnabled": true
+        },
+        {
+            "id": 2,
+            "name": "Workout",
+            "type": "expense",
+            "budget": 0,
+            "icon": "FitnessCenter",
+            "isEnabled": false
+        },
+        {
+            "id": 3,
+            "name": "Salary",
+            "type": "income",
+            "budget": 0,
+            "icon": "AttachMoney",
+            "isEnabled": true
+        },
+        {
+            "id": 4,
+            "name": "Freelance",
+            "type": "income",
+            "budget": 0,
+            "icon": "Computer",
+            "isEnabled": false
+        },
+        {
+            "id": 5,
+            "name": "Saving",
+            "type": "income",
+            "budget": 0,
+            "icon": "Savings",
+            "isEnabled": false
+        },
+        {
+            "id": 6,
+            "name": "Bills",
+            "type": "expense",
+            "budget": 0,
+            "icon": "ReceiptLong",
+            "isEnabled": false
+        }
+    ]
+}
