@@ -10,7 +10,7 @@ export function EntriesProvider({ children }) {
   };
 
   React.useEffect(() => {
-    let data = JSON.parse(localStorage.getItem("entries"));
+    let data = JSON.parse(localStorage.getItem("entries")) || [];
     setEntries(data);
   }, []);
 

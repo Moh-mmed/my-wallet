@@ -101,8 +101,6 @@ export default function NewUpdateEntryModal({
       );
 
       if (categoryType && cat && amount && date) {
-        console.log(entries)
-        return
         let id =
           action === "update"
             ? currentEntry["id"]
